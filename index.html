@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body class="bg-slate-100 m-5 overflow-y-hidden">
+    <header class="flex">
+      <span class="material-symbols-outlined my-3"> menu </span>
+      <img
+        src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
+        class="px-5"
+      />
+
+      <div class="bg-slate-200 w-1/2 rounded-3xl flex mx-24">
+        <span class="material-symbols-outlined p-2.5"> search </span>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Search mail"
+          class="bg-slate-200 text-lg focus:outline-none w-full"
+        />
+        <span class="material-symbols-outlined ml-auto p-2.5"> tune </span>
+      </div>
+
+      <div class="flex ml-auto mt-2">
+        <span class="px-3 material-symbols-outlined text-3xl text-gray-500">
+          help
+        </span>
+        <span class="px-3 material-symbols-outlined text-3xl text-gray-500">
+          settings
+        </span>
+        <span class="px-3 material-symbols-outlined text-3xl text-gray-500">
+          apps
+        </span>
+        <span class="px-3 material-symbols-outlined text-3xl text-gray-500">
+          account_circle
+        </span>
+      </div>
+    </header>
+    <main class="-ml-4 flex">
+      <!-- Left Section -->
+      <section class="max-w-64 h-screen mt-3 ml-1 flex flex-col">
+        <div
+          class="bg-sky-200 w-40 p-5 flex rounded-2xl hover:border-blue-600 cursor-default"
+        >
+          <span class="material-symbols-outlined"> edit </span>
+          <p class="px-3 cursor-default">Compose</p>
+        </div>
+
+        <div>
+          <div
+            class="flex px-3 pt-3 py-1.5 mt-4 bg-blue-200 w-64 rounded-tr-2xl rounded-br-2xl cursor-default"
+          >
+            <span class="material-symbols-outlined pr-5"> inbox </span>
+            <p><b>Inbox</b></p>
+            <p class="text-sm ml-auto"><b>545</b></p>
+          </div>
+          <div
+            class="flex px-3 py-1.5 text-gray-600 cursor-default hover:bg-slate-200 rounded-tr-2xl rounded-br-2xl"
+          >
+            <span class="material-symbols-outlined pr-5"> star </span>
+            <p>Starred</p>
+          </div>
+          <div
+            class="flex px-3 py-1.5 text-gray-600 cursor-default hover:bg-slate-200 rounded-tr-2xl rounded-br-2xl"
+          >
+            <span class="material-symbols-outlined pr-5"> schedule </span>
+            <p>Snoozed</p>
+          </div>
+          <div
+            class="flex px-3 py-1.5 text-gray-600 cursor-default hover:bg-slate-200 rounded-tr-2xl rounded-br-2xl"
+          >
+            <span class="material-symbols-outlined pr-5"> send </span>
+            <p>Sent</p>
+          </div>
+          <div
+            class="flex px-3 py-1.5 cursor-default hover:bg-slate-200 rounded-tr-2xl rounded-br-2xl"
+          >
+            <span class="material-symbols-outlined pr-5"> note </span>
+            <p><b>Drafts</b></p>
+          </div>
+          <div
+            class="flex px-3 py-1.5 text-gray-600 cursor-default hover:bg-slate-200 rounded-tr-2xl rounded-br-2xl"
+          >
+            <span class="material-symbols-outlined pr-5"> expand_more </span>
+            <p>More</p>
+          </div>
+          <div class="flex mt-8 text-gray-600">
+            <p class="ml-3 text-xl">Label</p>
+            <span class="material-symbols-outlined ml-auto mt-1"> add </span>
+          </div>
+        </div>
+      </section>
+      <section class="w-4/5 bg-white ml-5 mt-3 rounded-tr-2xl rounded-tl-2xl">
+        <div class="flex p-3">
+          <span class="material-symbols-outlined text-xl text-gray-600 pl-3">
+            check_box_outline_blank
+          </span>
+          <span class="material-symbols-outlined px-2 text-xl text-gray-700">
+            stat_minus_1
+          </span>
+          <span class="material-symbols-outlined px-2 text-xl text-gray-700">
+            refresh
+          </span>
+          <span class="material-symbols-outlined px-2 text-xl text-gray-700">
+            more_vert
+          </span>
+          <span class="ml-auto px-5 text-sm text-gray-700">1-50 of 798</span>
+          <span class="material-symbols-outlined text-xl text-gray-500">
+            navigate_before
+          </span>
+          <span class="material-symbols-outlined px-2 text-xl text-gray-900">
+            chevron_right
+          </span>
+          <span class="material-symbols-outlined px-2 text-xl text-gray-800">
+            keyboard
+          </span>
+          <span class="material-symbols-outlined text-xl text-gray-800">
+            expand_more
+          </span>
+        </div>
+        <div class="overflow-y-scroll h-5/6">
+          <div class="pt-8 flex">
+            <div
+              class="flex w-1/5 justify-start pl-4 border-b-4 border-blue-600 pb-4 text-blue-600 ml-2"
+            >
+              <span class="material-symbols-outlined pr-4"> inbox </span>
+              <p>Primary</p>
+            </div>
+            <div class="flex w-1/4 justify-start">
+              <span class="material-symbols-outlined pr-4 ml-5"> sell </span>
+              <p>Promotion</p>
+            </div>
+            <div class="flex w-1/3 justify-start">
+              <span class="material-symbols-outlined pr-4"> group </span>
+              <p>Social</p>
+            </div>
+          </div>
+          <!-- For Email Section -->
+          <div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div
+              class="flex h-12 border-y-2 hover:border-slate-300 hover:border-y-4"
+            >
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+            <div class="flex h-12 border-4">
+              <div class="w-1/5 ml-4 mt-2">
+                <span class="material-symbols-outlined text-lg text-gray-500">
+                  check_box_outline_blank
+                </span>
+                <span
+                  class="material-symbols-outlined px-2 text-lg text-gray-500"
+                >
+                  star
+                </span>
+                <span class="text-l"><b>PW</b></span>
+              </div>
+              <div class="mt-2 truncate w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                esse autem nam soluta consequatur fuga eligendi, impedit hic
+                omnis cumque sapiente minima et. Unde illo tempora eveniet nemo
+              </div>
+              <p class="ml-auto text-sm mt-2 mr-4">15:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <img
+          src="https://www.gstatic.com/companion/icon_assets/calendar_2020q4_2x.png"
+          alt=""
+          class="h-6 m-5 mt-8"
+        />
+        <img
+          src="https://www.gstatic.com/companion/icon_assets/keep_2020q4v3_2x.png"
+          alt=""
+          class="h-6 m-5 mt-8"
+        />
+        <img
+          src="https://www.gstatic.com/companion/icon_assets/tasks_2021_2x.png"
+          alt=""
+          class="h-6 m-5 mt-8"
+        />
+        <img
+          src="https://www.gstatic.com/companion/icon_assets/contacts_2022_2x.png "
+          alt=""
+          class="h-6 m-5 mt-8"
+        />
+        <span class="material-symbols-outlined ml-5 mt-8"> add </span>
+      </section>
+    </main>
+  </body>
+</html>
